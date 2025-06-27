@@ -1,0 +1,12 @@
+
+services:
+  - type: worker
+    name: bot-scalp-btc
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: bash start.sh
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: 7474571490:AAFEE8efexplZ7t0QyA2UiTbn4j3PYae8jw
+      - key: CHAT_ID
+        value: 5803697819
