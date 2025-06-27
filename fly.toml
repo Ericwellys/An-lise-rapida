@@ -1,0 +1,19 @@
+app = "bot-scalp-btc"
+
+[env]
+  TELEGRAM_TOKEN = "7474571490:AAFEE8efexplZ7t0QyA2UiTbn4j3PYae8jw"
+  CHAT_ID = "5803697819"
+
+[build]
+  image = "Dockerfile"
+
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
+  auto_start = true
+  auto_stop = false
+
+  [[services.ports]]
+    port = 80
+    handlers = ["http"]
+    
